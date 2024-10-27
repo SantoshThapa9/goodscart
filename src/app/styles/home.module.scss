@@ -1,0 +1,68 @@
+.page {
+  height: 100svh;
+  width: 100svw;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  .heading {
+    top: 10px;
+    position: absolute;
+    font-size: clamp(1.5rem, 6svw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--lilitaone);
+    p {
+      font-size: clamp(1rem, 2svw, 1.5rem);
+      font-family: var(--oxanium);
+    }
+  }
+  button {
+    border: 1px red solid;
+  }
+  .nike {
+    height: clamp(10rem, 25svw, 20rem);
+    width: clamp(25rem, 55svw, 35rem);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(130deg, gold, orange);
+    box-shadow: 2px 2px 6px grey;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    top: 13svh;
+    left: 0;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    @media (max-width: 768px) {
+      height: clamp(5rem, 25svw, 20rem);
+      width: clamp(5rem, 55svw, 35rem);
+    }
+    .dialog {
+      height: 100%;
+      width: 100%;
+    }
+    h1 {
+      font-weight: bold;
+    }
+    p {
+      font-size: clamp(0.8rem, 2svw, 1rem);
+    }
+    .image {
+      background-image: url("../assets/shoe/orangeblue.png");
+      height: 20svh;
+      width: 20svw;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      margin-left: 200px;
+    }
+  }
+}

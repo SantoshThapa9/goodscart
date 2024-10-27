@@ -1,0 +1,170 @@
+.page {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: gold;
+
+  button {
+    border: 1px red solid;
+  }
+
+  .nike {
+    height: clamp(10rem, 25svw, 20rem);
+    width: clamp(25rem, 55svw, 35rem);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    transition: all 0.3s ease;
+    top: 80px;
+
+    @media (max-width: 768px) {
+      height: clamp(5rem, 25svw, 20rem);
+      width: clamp(5rem, 55svw, 35rem);
+    }
+
+    .dialog {
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: clamp(0.8rem, 2svw, 1rem);
+    }
+
+    .image {
+      background-image: url("../assets/shoe/orangeblue.png");
+      height: 20svh;
+      width: 20svw;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      margin-left: 200px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.after {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background-color: orange;
+
+  .nike {
+    height: 100%;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 0;
+
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      position: absolute;
+      top: 50px;
+    }
+
+    p {
+      font-size: clamp(0.8rem, 2svw, 1rem);
+      text-align: center;
+      max-width: 600px;
+      margin: 10px 0;
+      position: absolute;
+      top: 100px;
+    }
+
+    .image {
+      background-image: url("../assets/shoe/orangeblue.png");
+      height: 40vh;
+      width: 60vw;
+      max-width: 600px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-bottom: 20px;
+      position: absolute;
+      margin-right: 200px;
+    }
+  }
+
+  .productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 90svh;
+  }
+
+  .productCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .productInfo {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .productTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+
+  .productPrice {
+    font-size: 16px;
+    color: #e67e22;
+    margin: 10px 0;
+  }
+
+  .productButton {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #d35400;
+    }
+  }
+}
